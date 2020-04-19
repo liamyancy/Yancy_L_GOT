@@ -28,6 +28,10 @@ main {
 	top:30px;
 }
 
+.hidden {
+	display: none;
+}
+
 #imageContainer {
 	width:600px;
 	height:360px;
@@ -57,7 +61,7 @@ main {
 	display:inline-block;
 	overflow:hidden;
 	background-image:url(../images/GOT_sprites.png);
-	background-repeat:no-repeat;
+	background-repeat: ifinite;
 	transition:transform .3s;
 	-webkit-transition:-webkit-transform .3s;
 	-moz-transition:-moz-transform .3s;
@@ -80,6 +84,15 @@ main {
 
 .arryn { background-position:-253px -54px; }
 .arryn:hover { background-position:-253px 0px; }
+
+.targaryen { background-position:-303px -54px; }
+.targaryen:hover { background-position:-303px 0px; }
+
+.frey { background-position:-355px -54px; }
+.frey:hover { background-position:-355px 0px; }
+
+.tyrell { background-position:-406px -54px; }
+.tyrell:hover { background-position:-406px 0px; }
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
@@ -123,7 +136,9 @@ main {
 
 video {
 	width: 80%;
-	margin-top: 10%;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-bottom: 1%;
 	border: thin solid #949393;
 }
 
@@ -135,10 +150,36 @@ video {
 	margin: 1.5em auto;
 }
 
+.vid-controls {
+	position: absolute;
+	margin-left: 6%;
+}
 
+.play-button button {
+	border-radius: 10px;
+	margin-right: 5px;
+}
 
+.pause-button button {
+	border-radius: 10px;
+	margin-right: 5px;
+}
 
+.rewind-button button {
+	border-radius: 10px;
+}
 
+.play-button button:hover {
+	cursor: pointer;
+	filter: invert(100%);
+}
 
+.pause-button button:hover {
+	cursor: pointer;
+	filter: invert(100%);
+}
 
-
+.rewind-button button:hover {
+	cursor: pointer;
+	filter: invert(100%);
+}

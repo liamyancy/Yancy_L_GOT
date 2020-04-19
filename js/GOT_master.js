@@ -5,7 +5,28 @@
 		houseVideo = lightBox.querySelector("video"),
 		closeButton = lightBox.querySelector(".close-button"),
 		currentHouseName = document.querySelector("h1"),
-		houseDescription = document.querySelector(".house-info");
+		houseDescription = document.querySelector(".house-info"),
+		playButton = document.querySelector(".play-button"),
+		pauseButton = document.querySelector(".pause-button"),
+		rwButton = document.querySelector(".rewind-button"),
+		bannerStark = document.querySelector(".starkBanner"),
+		bannerBaratheon = document.querySelector(".baratheonBanner"),
+		bannerLannister = document.querySelector(".lannisterBanner"),
+		bannerGreyjoy = document.querySelector(".greyjoyBanner"),
+		bannerTully = document.querySelector(".tullyBanner"),
+		bannerArryn = document.querySelector(".arrynBanner"),
+		bannerTargeryen = document.querySelector(".targeryenBanner"),
+		bannerFrey = document.querySelector(".freyBanner"),
+		bannerTyrell = document.querySelector(".tyrellBanner"),
+		starkSigil = document.querySelector(".starkSigil"),
+		baratheonSigil  = document.querySelector(".baratheonSigil"),
+		lannisterSigil = document.querySelector(".lannisterSigil"),
+		greyjoySigil = document.querySelector(".greyjoySigil"),
+		tullySigil = document.querySelector(".tullySigil"),
+		arrynSigil = document.querySelector(".arrynSigil"),
+		targeryenSigil = document.querySelector(".targeryenSigil"),
+		freySigil = document.querySelector(".freySigil"),
+		tyrellSigil = document.querySelector(".tyrellSigil");
 
 	const houseData = [
 		["Stark", `House Stark of Winterfell is a Great House of Westeros, ruling over the vast region known as the North from
@@ -57,7 +78,14 @@
 		rebellion against the Iron Throne; House Tully had supported the independence movement for the Kingdom of the North. The
 		current head of the house is unknown following the assassinations of Lord Walder Frey and two of his sons, Lothar Frey
 		and Walder Rivers, by the vengeful Arya Stark. This is made more complex by the subsequent assassination of all the male
-		Freys soon after. `]
+		Freys soon after. `],
+
+		["Tyrell", `House Tyrell of Highgarden is a Great House of Westeros. It rules over the Reach, a vast, fertile, and 
+		heavily-populated region of southwestern Westeros, from their castle-seat of Highgarden as Lords Paramount of the Reach 
+		and Wardens of the South after taking control of the region from House Gardener during the Targaryen conquest.The House 
+		is led by Lord Mace Tyrell. Mace's son and heir Loras is a tournament knight and was, secretly, the lover of Lord Renly 
+		Baratheon before his death. Mace's daughter Margaery married Renly when he crowned himself king in the War of the Five 
+		Kings to cement an alliance between Renly and her father.`]
 	];
 
 	//functions go in the middle -> what do we want our app to do?
@@ -92,9 +120,141 @@
 		houseVideo.currentTime = 0;
 	}
 
+	function playVideo() {
+		houseVideo.play();
+	}
+
+	function pauseVideo() {
+		houseVideo.pause();
+	}
+
+	function rewindVideo() {
+		houseVideo.currentTime = 0;
+	}
+
+	function starkSwap() {
+	bannerStark.classList.remove("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function baratheonSwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.remove("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function lannisterSwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.remove("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function greyjoySwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.remove("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function tullySwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.remove("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function arrynSwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.remove("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function targeryenSwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.remove("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function freySwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.remove("hidden");
+	bannerTyrell.classList.add("hidden");
+	}
+
+	function tyrellSwap() {
+	bannerStark.classList.add("hidden");
+	bannerBaratheon.classList.add("hidden");
+	bannerLannister.classList.add("hidden");
+	bannerGreyjoy.classList.add("hidden");
+	bannerTully.classList.add("hidden");
+	bannerArryn.classList.add("hidden");
+	bannerTargeryen.classList.add("hidden");
+	bannerFrey.classList.add("hidden");
+	bannerTyrell.classList.remove("hidden");
+	}
+
 	//event handling for our siginButtons
 	sigilButtons.forEach(button => button.addEventListener("click", showLightBox));
 
 	//add some event handling for the lightbox close button
 	closeButton.addEventListener("click", hideLightBox);
+	playButton.addEventListener("click", playVideo);
+	pauseButton.addEventListener("click", pauseVideo);
+	rwButton.addEventListener("click", rewindVideo);
+	starkSigil.addEventListener("click", starkSwap);
+	baratheonSigil.addEventListener("click", baratheonSwap);
+	lannisterSigil.addEventListener("click", lannisterSwap);
+	greyjoySigil.addEventListener("click", greyjoySwap);
+	tullySigil.addEventListener("click", tullySwap);
+	arrynSigil.addEventListener("click", arrynSwap);
+	targeryenSigil.addEventListener("click", targeryenSwap);
+	freySigil.addEventListener("click", freySwap);
+	tyrellSigil.addEventListener("click", tyrellSwap);
 })();
