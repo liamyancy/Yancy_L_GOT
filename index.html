@@ -11,29 +11,35 @@
     <main>
 
     <section id="imageContainer">
-    	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
-    		<img src="images/stark.jpg"/>
-    		<img src="images/baratheon.jpg"/>
-    		<img src="images/lannister.jpg"/>
-    		<img src="images/tully.jpg"/>
-    		<img src="images/greyjoy.jpg"/>
-    		<img src="images/arryn.jpg"/>
+    	<div id="houseImages">
+    		<img class="starkBanner" src="images/stark.jpg"/>
+    		<img class="baratheonBanner hidden" src="images/baratheon.jpg"/>
+    		<img class="lannisterBanner hidden" src="images/lannister.jpg"/>
+    		<img class="tullyBanner hidden" src="images/tully.jpg"/>
+    		<img class="greyjoyBanner hidden" src="images/greyjoy.jpg"/>
+    		<img class="arrynBanner hidden" src="images/arryn.jpg"/>
+            <img class="targeryenBanner hidden" src="images/targaryen.jpg"/>
+            <img class="freyBanner hidden" src="images/frey.jpg"/>
+            <img class="tyrellBanner hidden" src="images/tyrell.jpg"/>
         </div>
     </section>
 
     <nav id="bottomNav">
     	<ul id="navList">
         	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
-            <li><div class="sigilContainer stark" data-offset="0"></div></li>
-            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
-            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
-            <li><div class="sigilContainer tully" data-offset="3"></div></li>
-            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
-            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+            <li><div class="sigilContainer stark starkSigil" data-offset="0"></div></li>
+            <li><div class="sigilContainer baratheon baratheonSigil" data-offset="1"></div></li>
+            <li><div class="sigilContainer lannister lannisterSigil" data-offset="2"></div></li>
+            <li><div class="sigilContainer tully tullySigil" data-offset="3"></div></li>
+            <li><div class="sigilContainer greyjoy greyjoySigil" data-offset="4"></div></li>
+            <li><div class="sigilContainer arryn arrynSigil" data-offset="5"></div></li>
+            <li><div class="sigilContainer targaryen targeryenSigil" data-offset="6"></div></li>
+            <li><div class="sigilContainer frey freySigil" data-offset="7"></div></li>
+            <li><div class="sigilContainer tyrell tyrellSigil" data-offset="8"></div></li>
         </ul>
     </nav>
 
-    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+    <h1>Game Of Thrones Nine Great Houses</h1><!-- replace this with the house name -->
 
     <p class="house-info"></p><!-- replace this with house details (github gist) -->
 </main>  <!--end mainContainer-->
@@ -43,10 +49,13 @@
     <video src="video/House-Stark.mp4"></video>
     <div class="vid-controls">
         <span class="play-button">
+            <button>Play</button>
+        </span>
+        <span class="pause-button">
             <button>Pause</button>
         </span>
 
-        <span class="play-button">
+        <span class="rewind-button">
             <button>Rewind</button>
         </span>
     </div>
